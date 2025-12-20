@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Director Ritchie Creative</title>
+    <title>Gallery | Omuga Production</title>
     <meta name="description"
-        content="Explore Director Ritchie's photography and videography portfolio showcasing diverse visual projects.">
+        content="Explore Omuga Production's photography and videography portfolio showcasing diverse visual projects.">
 
     <!-- Preconnect to CDNs for faster resource loading -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -309,6 +309,14 @@
             .btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* Prevent FOIT/flash: hide header logo immediately on very small screens */
+            .navbar .navbar-brand img {
+                display: none !important;
             }
         }
     </style>

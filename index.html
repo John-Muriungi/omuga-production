@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Director Ritchie | Creative Director & Visual Artist</title>
+    <title>Omuga Production | Creative Director & Visual Artist</title>
     <meta name="description"
         content="Creative Director, Photographer & Videographer specializing in visual storytelling and brand development.">
-    <meta property="og:title" content="Director Ritchie | Creative Director & Visual Artist">
+    <meta property="og:title" content="Omuga Production | Creative Director & Visual Artist">
     <meta property="og:description"
         content="Portfolio of creative visual work in photography, videography and direction.">
     <meta property="og:image" content="images/hero/hero-image.jpg">
@@ -317,6 +317,14 @@
                 font-size: 0.9rem;
             }
         }
+
+        @media (max-width: 480px) {
+
+            /* Prevent FOIT/flash: hide header logo immediately on very small screens */
+            .navbar .navbar-brand img {
+                display: none !important;
+            }
+        }
     </style>
 
     <!-- Non-critical CSS - Deferred loading -->
@@ -438,9 +446,10 @@
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="col-lg-4  mb-4 mb-lg-0">
                     <a class="navbar-brand mb-3 d-flex align-items-center" href="index.html">
-                        <img src="images/gallery/logo.png" alt="omuga logo" width="34" height="28" class="me-2">
+                        <img src="images/gallery/logo.png" class="d-none d-lg-block" alt="omuga logo" width="34"
+                            height="28" class="me-2">
                         <span class="brand-text">Omuga Production</span>
                     </a>
                     <p class="footer-text">Creating visual experiences that inspire and engage audiences worldwide.</p>
@@ -477,7 +486,7 @@
 
             <div class="row mt-5 pt-4 border-top">
                 <div class="col-md-6">
-                    <p class="copyright">&copy; <span id="currentYear"></span> Director Ritchie Creative. All rights
+                    <p class="copyright">&copy; <span id="currentYear"></span> Omuga Production. All rights
                         reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">

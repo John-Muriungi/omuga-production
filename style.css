@@ -67,7 +67,7 @@ footer .brand-text {
 html:not([data-theme="dark"]) .navbar-brand img,
 html:not([data-theme="dark"]) footer .navbar-brand img {
     background-color: #111;
-    padding: 6px;
+    padding: 4px;
     border-radius: 6px;
     display: inline-block;
 }
@@ -91,6 +91,30 @@ html:not([data-theme="dark"]) footer .navbar-brand img {
 
     footer .brand-text {
         font-size: 0.9rem;
+    }
+}
+
+/* On very small screens hide header logo image; keep header brand text visible and footer brand present */
+@media (max-width: 540px) {
+
+    /* Hide only the header logo image */
+    .navbar .navbar-brand img {
+        display: none !important;
+    }
+
+    /* Keep header brand text visible so navigation still shows the name */
+    .navbar .navbar-brand .brand-text {
+        display: inline-block !important;
+    }
+
+    /* Ensure footer brand remains visible */
+    /* Hide footer logo on very small screens too (we'll keep footer text visible) */
+    footer .navbar-brand img {
+        display: none !important;
+    }
+
+    footer .navbar-brand .brand-text {
+        display: inline-block !important;
     }
 }
 
