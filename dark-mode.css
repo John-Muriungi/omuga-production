@@ -1,0 +1,125 @@
+/* 
+   Dark Mode Styles
+   Activated via JavaScript toggle
+*/
+
+[data-theme="dark"] {
+    /* Dark Theme Variables */
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --primary-light: #60a5fa;
+    --text-color: #f3f4f6;
+    --text-light: #9ca3af;
+    --bg-color: #111827;
+    --bg-secondary: #1f2937;
+    --bg-light: #374151;
+    --border-color: #4b5563;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Specific Styles */
+[data-theme="dark"] .navbar {
+    background-color: rgba(17, 24, 39, 0.95);
+}
+
+[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(31, 41, 55, 0.8) 100%),
+        url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1528&q=80') center/cover no-repeat;
+}
+
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .testimonial,
+[data-theme="dark"] .contact-form {
+    background-color: var(--bg-light);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-item {
+    background-color: var(--bg-light);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .footer {
+    background-color: var(--bg-color);
+}
+
+/* Gallery Filters Dark Mode */
+[data-theme="dark"] .btn-filter {
+    background-color: #000000;
+    color: white;
+    border-color: #000000;
+}
+
+[data-theme="dark"] .btn-filter:hover,
+[data-theme="dark"] .btn-filter.active {
+    background-color: #333333;
+    border-color: #333333;
+    color: white;
+}
+
+/* Navigation: keep active link text white and underlined in dark mode */
+[data-theme="dark"] .nav-link {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .nav-link.active:hover,
+[data-theme="dark"] .nav-link.active:focus {
+    color: #ffffff !important;
+}
+
+/* Make the active underline visible and match the active text color */
+[data-theme="dark"] .nav-link.active::after,
+[data-theme="dark"] .nav-link.active:hover::after,
+[data-theme="dark"] .nav-link.active:focus::after {
+    width: 100%;
+    background-color: #ffffff !important;
+}
+
+/* Prevent hover from changing active link color */
+[data-theme="dark"] .nav-link.active:hover {
+    color: #ffffff !important;
+}
+
+/* Headings: bold and black in dark mode (on white backgrounds) */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    font-weight: 700;
+    color: #000000;
+}
+
+[data-theme="dark"] .section-title {
+    font-weight: 700;
+    color: #000000;
+}
+
+[data-theme="dark"] .page-title {
+    font-weight: 700;
+    color: #000000;
+}
+
+[data-theme="dark"] .contact-heading {
+    font-weight: 700;
+    color: #000000;
+}
+
+[data-theme="dark"] .footer-heading {
+    font-weight: 700;
+    color: #000000;
+}

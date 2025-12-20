@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Director Ritchie Creative</title>
+    <meta name="description"
+        content="Learn about Director Ritchie's creative journey, services, and expertise in photography and videography.">
+
+    <!-- Preconnect to CDNs for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts with display=swap for faster rendering -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Navigation - Fixed Z-index -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-name">DR</span>
+                <span class="brand-text">Director Ritchie</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="social-icons ms-4 d-none d-lg-flex">
+                    <a href="https://www.instagram.com/director_ritchie/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/richard-omuga-97a112399/" target="_blank"
+                        rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/254743547779?text=Hi%20Director%20Ritchie%2C%20I%27m%20interested%20in%20your%20services.%20Please%20get%20back%20to%20me"
+                        target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+
+                <button id="themeToggle" class="btn btn-outline ms-3" aria-label="Toggle Dark Mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="page-hero about-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="page-title">About Me</h1>
+                    <p class="page-subtitle">Creative visionary with a passion for visual storytelling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-image">
+                        <img src="/images/gallery/profile-img.jpg
+                        " alt="Director MRitchie" class="img-fluid rounded" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">The Journey</h2>
+                    <p class="lead mb-4">I've been transforming ideas into compelling visual
+                        narratives that resonate with audiences and elevate brands.</p>
+                    <p>My journey began with a simple camera and a passion for capturing moments. What started as a
+                        personal interest evolved into a professional career spanning commercial photography, cinematic
+                        videography, and creative direction for global brands.</p>
+                    <p>I believe that every project tells a story, and my role is to ensure that story is told with
+                        authenticity, creativity, and technical excellence. Whether working with Fortune 500 companies
+                        or passionate startups, I bring the same dedication to visual storytelling.</p>
+                    <p class="mt-4"><strong>Based in Kenya, working countrywide.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Services</h2>
+                    <p class="section-subtitle">Comprehensive visual solutions for brands and individuals</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-4">
+                            <i class="bi bi-easel2-fill"></i>
+                        </div>
+                        <h3 class="service-title mb-3">Creative Direction</h3>
+                        <p class="service-description">Leading visual strategy from concept to execution, ensuring brand
+                            consistency and creative excellence across all mediums and platforms.</p>
+                        <ul class="service-list text-start">
+                            <li>Brand Visual Identity</li>
+                            <li>Campaign Strategy</li>
+                            <li>Art Direction</li>
+                            <li>Content Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-4">
+                            <i class="bi bi-camera-fill"></i>
+                        </div>
+                        <h3 class="service-title mb-3">Photography</h3>
+                        <p class="service-description">Capturing compelling imagery for commercial, editorial, and
+                            personal projects with a focus on storytelling and technical precision.</p>
+                        <ul class="service-list text-start">
+                            <li>Commercial & Advertising</li>
+                            <li>Portrait & Lifestyle</li>
+                            <li>Product & Still Life</li>
+                            <li>Editorial & Documentary</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-4">
+                            <i class="bi bi-camera-reels-fill"></i>
+                        </div>
+                        <h3 class="service-title mb-3">Videography</h3>
+                        <p class="service-description">Producing cinematic video content that engages audiences, from
+                            short-form social content to long-form documentary storytelling.</p>
+                        <ul class="service-list text-start">
+                            <li>Commercial Video</li>
+                            <li>Brand Documentaries</li>
+                            <li>Event Coverage</li>
+                            <li>Social Media Content</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Client Testimonials</h2>
+                    <p class="section-subtitle">What clients say about working together</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial text-center p-5">
+                                    <p class="testimonial-text">"Alex transformed our brand's visual identity with
+                                        exceptional creativity and attention to detail. The campaign exceeded all
+                                        expectations."</p>
+                                    <h5 class="testimonial-author">Sarah Johnson</h5>
+                                    <p class="testimonial-role">Marketing Director, TechForward Inc.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial text-center p-5">
+                                    <p class="testimonial-text">"Working with Alex was a game-changer for our product
+                                        launch. The photography and video content captured our vision perfectly."</p>
+                                    <h5 class="testimonial-author">Michael Chen</h5>
+                                    <p class="testimonial-role">CEO, Verde Lifestyle</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial text-center p-5">
+                                    <p class="testimonial-text">"Professional, creative, and incredibly talented. Alex's
+                                        work elevated our annual report to an entirely new level of visual
+                                        storytelling."</p>
+                                    <h5 class="testimonial-author">Elena Rodriguez</h5>
+                                    <p class="testimonial-role">Communications Manager, Global Health Org</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section class="skills-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Skills & Tools</h2>
+                    <p class="section-subtitle">Technical expertise and creative tools</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h4 class="skills-category">Technical Skills</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Creative Direction</span>
+                        <span class="skill-tag">Photography</span>
+                        <span class="skill-tag">Videography</span>
+                        <span class="skill-tag">Cinematography</span>
+                        <span class="skill-tag">Photo Editing</span>
+                        <span class="skill-tag">Video Editing</span>
+                        <span class="skill-tag">Color Grading</span>
+                        <span class="skill-tag">Visual Storytelling</span>
+                        <span class="skill-tag">Brand Strategy</span>
+                        <span class="skill-tag">Art Direction</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="skills-category">Tools & Software</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Adobe Creative Suite</span>
+                        <span class="skill-tag">Final Cut Pro</span>
+                        <span class="skill-tag">DaVinci Resolve</span>
+                        <span class="skill-tag">Capture One</span>
+                        <span class="skill-tag">Sony/Canon Systems</span>
+                        <span class="skill-tag">Lighting Equipment</span>
+                        <span class="skill-tag">Drone Photography</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">Trello</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3" href="index.html">
+                        <span class="brand-name">DR</span>
+                        <span class="brand-text">Director Ritchie</span>
+                    </a>
+                    <p class="footer-text">Creating visual experiences that inspire and engage audiences worldwide.</p>
+                    <p class="footer-location mt-2">Based in Kenya, working countrywide.</p>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5 class="footer-heading mb-3">Connect</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/director_ritchie/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/richard-omuga-97a112399/" target="_blank"
+                            rel="noopener noreferrer" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://wa.me/254743547779?text=Hi%20Director%20Ritchie%2C%20I%27m%20interested%20in%20your%20services.%20Please%20get%20back%20to%20me"
+                            target="_blank" rel="noopener noreferrer" class="social-icon"><i
+                                class="bi bi-whatsapp"></i></a>
+                    </div>
+                    <p class="footer-text mt-3">
+                        <i class="bi bi-envelope me-2"></i><a href="mailto:omugaprod@gmail.com">omugaprod@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; <span id="currentYear"></span> Director Ritchie Creative. All rights
+                        reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS with defer for non-blocking load -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS with defer -->
+    <script defer src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Director Ritchie Creative</title>
+    <meta name="description"
+        content="Explore Director Ritchie's photography and videography portfolio showcasing diverse visual projects.">
+
+    <!-- Preconnect to CDNs for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts with display=swap for faster rendering -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Navigation - Fixed Z-index -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-name">DR</span>
+                <span class="brand-text">Director Ritchie</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="social-icons ms-4 d-none d-lg-flex">
+                    <a href="https://www.instagram.com/director_ritchie/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/richard-omuga-97a112399/" target="_blank"
+                        rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/254743547779?text=Hi%20Director%20Ritchie%2C%20I%27m%20interested%20in%20your%20services.%20Please%20get%20back%20to%20me"
+                        target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+
+                <button id="themeToggle" class="btn btn-outline ms-3" aria-label="Toggle Dark Mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Gallery Hero -->
+    <section class="page-hero gallery-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="page-title">Gallery</h1>
+                    <p class="page-subtitle">A visual journey through diverse projects and creative explorations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="filter-buttons d-flex flex-wrap justify-content-center gap-2">
+                        <button class="btn btn-filter active" data-filter="all">All</button>
+                        <button class="btn btn-filter" data-filter="photography">Photography</button>
+                        <button class="btn btn-filter" data-filter="videography">Videography</button>
+                        <button class="btn btn-filter" data-filter="commercial">Commercial</button>
+                        <button class="btn btn-filter" data-filter="personal">Personal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <div class="loading-spinner" id="galleryLoading">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading gallery...</span>
+                </div>
+            </div>
+
+            <div class="row g-4" id="galleryGrid">
+                <!-- Gallery items will be loaded dynamically -->
+            </div>
+
+            <div class="text-center mt-5" id="loadMoreContainer">
+                <button class="btn btn-outline" id="loadMoreBtn">
+                    Load More
+                    <i class="bi bi-arrow-clockwise ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal (Lightbox) -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalTitle">Image Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="" class="img-fluid" id="modalImage">
+                    <div class="image-details mt-3">
+                        <p id="imageDescription"></p>
+                        <p id="imageCategory" class="text-muted"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary" id="viewProjectBtn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3" href="index.html">
+                        <span class="brand-name">DR</span>
+                        <span class="brand-text">Director Ritchie</span>
+                    </a>
+                    <p class="footer-text">Creating visual experiences that inspire and engage audiences worldwide.</p>
+                    <p class="footer-location mt-2">Based in Kenya, working countrywide.</p>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html#services">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5 class="footer-heading mb-3">Connect</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/director_ritchie/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/richard-omuga-97a112399/" target="_blank"
+                            rel="noopener noreferrer" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://wa.me/254743547779?text=Hi%20Director%20Ritchie%2C%20I%27m%20interested%20in%20your%20services.%20Please%20get%20back%20to%20me"
+                            target="_blank" rel="noopener noreferrer" class="social-icon"><i
+                                class="bi bi-whatsapp"></i></a>
+                    </div>
+                    <p class="footer-text mt-3">
+                        <i class="bi bi-envelope me-2"></i><a href="mailto:omugaprod@gmail.com">omugaprod@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; <span id="currentYear"></span> Director Ritchie Creative. All rights
+                        reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS with defer for non-blocking load -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Masonry Layout with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <!-- Custom JS with defer -->
+    <script defer src="main.js"></script>
+    <script defer src="gallery.js"></script>
+</body>
+
+</html>

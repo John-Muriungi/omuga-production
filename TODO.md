@@ -1,0 +1,1 @@
+- [x] Update galleryData in gallery.js to use local image paths instead of external URLs
