@@ -25,11 +25,28 @@ document.addEventListener('DOMContentLoaded', function () {
  * Dark/Light Theme Toggle - FIXED VERSION
  */
 function initThemeToggle() {
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle?.querySelector('i');
+    let themeToggle = document.getElementById('themeToggle');
+    let themeIcon = themeToggle?.querySelector('i');
+
+    // If the toggle button is missing from the DOM (e.g., trimmed during edits), create a fallback
+    if (!themeToggle) {
+        const navContainer = document.querySelector('.navbar .container') || document.querySelector('.navbar');
+        if (navContainer) {
+            themeToggle = document.createElement('button');
+            themeToggle.id = 'themeToggle';
+            themeToggle.className = 'btn btn-outline ms-3';
+            themeToggle.setAttribute('aria-label', 'Toggle Dark Mode');
+            themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
+            // Append to the navbar container so it appears with other controls
+            navContainer.appendChild(themeToggle);
+            console.log('Theme toggle created and appended to navbar');
+        }
+    }
+
+    themeIcon = themeToggle?.querySelector('i');
 
     if (!themeToggle || !themeIcon) {
-        console.log('Theme toggle elements not found');
+        console.log('Theme toggle elements not found or could not be created');
         return;
     }
 

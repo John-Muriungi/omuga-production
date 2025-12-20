@@ -20,9 +20,306 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dark-mode.css">
+
+    <!-- Critical CSS - Inlined for fast first paint -->
+    <style>
+        /* Critical CSS - Above-the-fold styles only */
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --text-color: #1f2937;
+            --text-light: #6b7280;
+            --bg-color: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-light: #f3f4f6;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --primary-light: #60a5fa;
+            --text-color: #f3f4f6;
+            --text-light: #9ca3af;
+            --bg-color: #111827;
+            --bg-secondary: #1f2937;
+            --bg-light: #374151;
+            --border-color: #4b5563;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brand-name {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin: 0 1rem;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(243, 244, 246, 0.8) 100%);
+        }
+
+        .display-1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .spinner-border {
+            border: 3px solid var(--bg-light);
+            border-top-color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: -0.5rem;
+        }
+
+        .col-lg-4,
+        .col-lg-6,
+        .col-lg-8,
+        .col-md-6 {
+            flex: 1;
+            min-width: 0;
+            padding: 0.5rem;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .gap-3 {
+            gap: 1rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        .mt-5 {
+            margin-top: 3rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .vh-100 {
+            height: 100vh;
+        }
+
+        .py-5 {
+            padding: 3rem 0;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .ms-3 {
+            margin-left: 1rem;
+        }
+
+        .ms-4 {
+            margin-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .display-1 {
+                font-size: 2rem;
+            }
+
+            .lead {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- Non-critical CSS - Deferred loading -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="dark-mode.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="dark-mode.css">
+    </noscript>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
@@ -30,9 +327,9 @@
     <!-- Navigation - Fixed Z-index -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <span class="brand-name">DR</span>
-                <span class="brand-text">Director Ritchie</span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/gallery/logo.png" alt="omuga logo" width="34" height="28" class="me-2">
+                <span class="brand-text">Omuga Production</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -159,9 +456,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <a class="navbar-brand mb-3" href="index.html">
-                        <span class="brand-name">DR</span>
-                        <span class="brand-text">Director Ritchie</span>
+                    <a class="navbar-brand mb-3 d-flex align-items-center" href="index.html">
+                        <img src="images/gallery/logo.png" alt="omuga logo" width="34" height="28" class="me-2">
+                        <span class="brand-text">Omuga Production</span>
                     </a>
                     <p class="footer-text">Creating visual experiences that inspire and engage audiences worldwide.</p>
                     <p class="footer-location mt-2">Based in Kenya, working countrywide.</p>
@@ -197,7 +494,7 @@
 
             <div class="row mt-5 pt-4 border-top">
                 <div class="col-md-6">
-                    <p class="copyright">&copy; <span id="currentYear"></span> Director Ritchie Creative. All rights
+                    <p class="copyright">&copy; <span id="currentYear"></span> Omuga Production. All rights
                         reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">

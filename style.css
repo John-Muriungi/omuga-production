@@ -38,6 +38,62 @@
 }
 
 /* ===== BASE STYLES ===== */
+
+/* Brand image and text tweaks for consistent alignment */
+.navbar-brand img {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 40px;
+    width: auto;
+}
+
+.navbar-brand .brand-text {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+/* Footer brand slightly smaller */
+footer .navbar-brand img {
+    max-height: 36px;
+}
+
+footer .brand-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Logo background: black on light mode, transparent in dark mode */
+html:not([data-theme="dark"]) .navbar-brand img,
+html:not([data-theme="dark"]) footer .navbar-brand img {
+    background-color: #111;
+    padding: 6px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+[data-theme="dark"] .navbar-brand img,
+[data-theme="dark"] footer .navbar-brand img {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 28px;
+    }
+
+    .navbar-brand .brand-text {
+        font-size: 0.98rem;
+    }
+
+    footer .brand-text {
+        font-size: 0.9rem;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
