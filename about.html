@@ -315,8 +315,11 @@
         @media (max-width: 480px) {
 
             /* Prevent FOIT/flash: hide header logo immediately on very small screens */
+            /* Show a compact logo on very small screens to improve navigation */
             .navbar .navbar-brand img {
-                display: none !important;
+                display: block !important;
+                width: 28px !important;
+                height: auto !important;
             }
         }
     </style>
