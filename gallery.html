@@ -348,7 +348,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -357,7 +357,7 @@
                         <a class="nav-link" href="about.html#services">Services</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link active" href="gallery.html">Gallery</a>
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -439,10 +439,12 @@
     <!-- Image Modal removed - now using fullscreen directly -->
 
     <!-- Fullscreen Image Overlay -->
-    <div id="fullscreenOverlay" style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 2000; align-items: center; justify-content: center; padding: 0; margin: 0;">
+    <div id="fullscreenOverlay"
+        style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 2000; align-items: center; justify-content: center; padding: 0; margin: 0;">
         <!-- Image container -->
-        <img id="fullscreenImage" src="" alt="fullscreen image" style="max-width: 90vw; max-height: 90vh; object-fit: contain; display: block; transition: transform 0.2s ease; width: auto; height: auto;">
-        
+        <img id="fullscreenImage" src="" alt="fullscreen image"
+            style="max-width: 90vw; max-height: 90vh; object-fit: contain; display: block; transition: transform 0.2s ease; width: auto; height: auto;">
+
         <!-- Controls -->
         <div style="position: absolute; top: 10px; right: 10px; gap: 10px; display: flex; z-index: 2001;">
             <button type="button" class="btn btn-sm btn-light" id="fullscreenZoomInBtn" title="Zoom In">
@@ -485,17 +487,34 @@
                 <div class="col-lg-4">
                     <h5 class="footer-heading mb-3">Connect</h5>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/director_ritchie/" target="_blank" rel="noopener noreferrer"
-                            class="social-icon"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/richard-omuga-97a112399/" target="_blank"
-                            rel="noopener noreferrer" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://wa.me/254743547779?text=Hi%20Director%20Ritchie%2C%20I%27m%20interested%20in%20your%20services.%20Please%20get%20back%20to%20me"
-                            target="_blank" rel="noopener noreferrer" class="social-icon"><i
-                                class="bi bi-whatsapp"></i></a>
+                        <h1 class="footer-icon">
+                            <a href="https://www.instagram.com/director_ritchie/" target="_blank"
+                                rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                <i class="bi bi-instagram" aria-hidden="true"></i>
+                                <span class="visually-hidden">Instagram</span>
+                            </a>
+                        </h1>
+                        <h1 class="footer-icon">
+                            <a href="https://www.linkedin.com/in/richard-omuga-97a112399/" target="_blank"
+                                rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                <span class="visually-hidden">LinkedIn</span>
+                            </a>
+                        </h1>
+                        <h1 class="footer-icon">
+                            <a href="https://wa.me/254743547779?text=Hi%20Director%20Ritchie%2C%20I%27m%20interested%20in%20your%20services.%20Please%20get%20back%20to%20me"
+                                target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+                                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                                <span class="visually-hidden">WhatsApp</span>
+                            </a>
+                        </h1>
                     </div>
-                    <p class="footer-text mt-3">
-                        <i class="bi bi-envelope me-2"></i><a href="mailto:omugaprod@gmail.com">omugaprod@gmail.com</a>
-                    </p>
+                    <h1 class="email-icon mt-3">
+                        <a href="mailto:omugaprod@gmail.com" class="email-link" aria-label="Email Omuga Production">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                            <span class="visually-hidden">Email Omuga Production</span>
+                        </a>
+                    </h1>
                 </div>
             </div>
 
