@@ -82,8 +82,12 @@
 
 /* Make the active underline visible and match the active text color */
 [data-theme="dark"] .nav-link.active::after,
-[data-theme="dark"] .nav-link.active:hover::after,
 [data-theme="dark"] .nav-link.active:focus::after {
+    width: 100%;
+    background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .nav-link.active:hover::after {
     width: 100%;
     background-color: #ffffff !important;
 }
