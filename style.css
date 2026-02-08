@@ -630,49 +630,6 @@ img {
     font-weight: bold;
 }
 
-/* ===== TESTIMONIALS ===== */
-.testimonials-section {
-    padding: 5rem 0;
-}
-
-.testimonial {
-    background-color: var(--bg-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    position: relative;
-    border: 1px solid var(--border-color);
-}
-
-.testimonial::before {
-    content: '"';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 4rem;
-    color: var(--primary-color);
-    opacity: 0.2;
-    font-family: 'Playfair Display', serif;
-}
-
-.testimonial-text {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1;
-    color: var(--text-color);
-}
-
-.testimonial-author {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.testimonial-role {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
 /* ===== SKILLS ===== */
 .skills-section {
     padding: 5rem 0;

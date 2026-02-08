@@ -29,7 +29,7 @@
 }
 
 [data-theme="dark"] .service-card,
-[data-theme="dark"] .testimonial,
+
 [data-theme="dark"] .contact-form {
     background-color: var(--bg-light);
 }
